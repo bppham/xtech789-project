@@ -1,0 +1,208 @@
+.hero-section {
+  width: 100%;
+  display: flex;
+}
+
+.hero-section .left-section {
+  flex: 1;
+}
+
+.hero-section .right-section {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.carousel-overlay .small-text {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.carousel-overlay h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.shop-btn {
+  padding: 8px 16px;
+  border: none;
+  background: white;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 36px;
+  background: none;
+  border: none;
+  color: white;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.arrow.left {
+  left: 16px;
+}
+
+.arrow.right {
+  right: 16px;
+}
+
+/* Banner dưới */
+.sub-banners {
+  display: flex;
+  margin-top: 20px;
+  gap: 16px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.banner-item {
+  flex: 1;
+  position: relative;
+}
+
+.banner-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.banner-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+}
+
+.banner-text p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.banner-text h3 {
+  font-size: 28px;
+  margin: 8px 0;
+}
+
+.banner-text button {
+  border: 1px solid #ccc;
+  background-color: transparent;
+  color: black;
+}
+
+.banner-text button:hover {
+  color: black;
+  background-color: white;
+}
+
+@media screen and (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .hero-section .left-section {
+    display: none;
+  }
+
+  .hero-section .right-section {
+    flex: 1;
+    width: 100%;
+  }
+
+  .carousel {
+    height: 300px;
+  }
+
+  .carousel-overlay h2 {
+    font-size: 28px;
+  }
+
+  .carousel-overlay .small-text {
+    font-size: 12px;
+  }
+
+  .shop-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .sub-banners {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .banner-item img {
+    height: 180px;
+  }
+
+  .banner-text h3 {
+    font-size: 18px;
+  }
+
+  .banner-text p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .carousel {
+    height: 240px;
+  }
+
+  .carousel-overlay h2 {
+    font-size: 22px;
+  }
+
+  .carousel-overlay .small-text {
+    font-size: 11px;
+  }
+
+  .arrow {
+    font-size: 28px;
+    left: 8px;
+    right: 8px;
+  }
+
+  .shop-btn {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+
+  .banner-text h3 {
+    font-size: 16px;
+  }
+
+  .banner-text p {
+    font-size: 11px;
+  }
+}

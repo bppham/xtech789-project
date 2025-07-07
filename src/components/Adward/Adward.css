@@ -1,0 +1,166 @@
+/* Tổng thể section */
+.award-section {
+  padding: 32px 24px;
+  background-color: #f7f7f7;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Phần banner đầu */
+.award-top {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.device-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text đè lên banner */
+.award-heading {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  text-align: right;
+  color: #000;
+  max-width: 90%;
+  word-break: break-word;
+}
+
+.award-heading h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.award-heading p {
+  margin: 4px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.source {
+  font-size: 12px;
+  font-style: italic;
+  color: #555;
+}
+
+/* Danh sách award */
+.award-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+/* Một item */
+.award-item {
+  width: 150px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.award-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.award-item h5 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.award-item p {
+  font-size: 12px;
+  white-space: pre-line;
+  color: #555;
+}
+
+/* Tablet (<=768px) */
+@media screen and (max-width: 768px) {
+  .device-image {
+    height: 100px;
+  }
+
+  .award-heading {
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .award-heading h4 {
+    font-size: 16px;
+  }
+
+  .award-heading p {
+    font-size: 14px;
+  }
+
+  .source {
+    font-size: 11px;
+  }
+
+  .award-item {
+    width: 45%;
+  }
+}
+
+/* Mobile (<=480px) */
+@media screen and (max-width: 480px) {
+  .device-image {
+    height: 80px;
+  }
+
+  .award-heading h4 {
+    font-size: 14px;
+  }
+
+  .award-heading p {
+    font-size: 13px;
+  }
+
+  .source {
+    font-size: 10px;
+  }
+
+  /* Cho phép vuốt ngang */
+  .award-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-behavior: smooth;
+    padding-bottom: 8px;
+  }
+
+  .award-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .award-item {
+    width: 140px;
+    flex: 0 0 auto;
+  }
+
+  .award-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .award-item h5 {
+    font-size: 13px;
+  }
+
+  .award-item p {
+    font-size: 11px;
+  }
+}

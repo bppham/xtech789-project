@@ -1,0 +1,19 @@
+/* Đảm bảo trang chiếm full chiều cao */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Bọc toàn bộ layout trong container có chiều cao min 100% */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Nội dung chính sẽ mở rộng đẩy footer xuống */
+.main-content {
+  flex: 1;
+}
